@@ -11,7 +11,9 @@ const Slider = () => {
 
   const changeColor = () => {
     console.log('button Clicked')
-    setCount(count + 1)
+    if(count === 3){
+      setCount(0)
+    } else setCount(count + 1)
   }
   return (
     <section className={Styles.background} style={bgstyle}>
