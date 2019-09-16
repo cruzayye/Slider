@@ -1,8 +1,9 @@
 import React from 'react';
 import Styles from './Slider.css'
 
+const color = ['red', 'blue', 'yellow']
 const bgstyle = {
-  background: 'red',
+  background: color[2],
 }
 
 const Slider = () => {
