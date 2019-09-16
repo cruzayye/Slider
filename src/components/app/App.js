@@ -1,6 +1,7 @@
 import React from 'react';
+import Slider from '../Slider/Slider';
 
 export default function App() {
-  return <h2>React template setup</h2>
+  return <Slider />;
 }
 
