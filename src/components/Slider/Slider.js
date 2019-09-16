@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Styles from './Slider.css'
 
-const color = ['red', 'blue', 'yellow']
-const bgstyle = {
-  background: color[2],
-}
 
 const Slider = () => {
+  const [count, setCount] = useState(0);
+  const color = ['red', 'blue', 'yellow']
+  const bgstyle = {
+    background: color[count],
+  }
+
+  const changeColor = () => {
+    console.log('button Clicked')
+    setCount(count + 1)
+  }
   return (
     <section className={Styles.background} style={bgstyle}>
-      <h2>Slider goes here</h2>
+      <h2>Slider goes here</h2> <br/>
+      <button onClick={changeColor}>Change Color</button>
     </section>
   );
 };
