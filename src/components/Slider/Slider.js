@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 import Styles from './Slider.css'
+import kano from '../../images/kano-mortal-kombat-11-uhdpaper.com-4K-274.jpg';
+import luKang from '../../images/lu_kang.jpg';
+import scorpion from '../../images/scorpion-bg.jpg';
 
 
 const Slider = () => {
   const [count, setCount] = useState(0);
-  const color = ['red', 'blue', 'yellow']
+  const sampleImage = '../../images/kano-mortal-kombat-11-uhdpaper.com-4K-274.jpg'; 
+  const backgroundImgs = [
+    kano,
+    luKang,
+    scorpion 
+  ]
   const bgstyle = {
-    background: color[count],
+    backgroundImage: `url(${backgroundImgs[0]})`
+
+
   }
 
   const changeColor = () => {
