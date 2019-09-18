@@ -7,29 +7,29 @@ import scorpion from '../../images/scorpion-bg.jpg';
 
 const Slider = () => {
   const [count, setCount] = useState(0);
-  const sampleImage = '../../images/kano-mortal-kombat-11-uhdpaper.com-4K-274.jpg'; 
   const backgroundImgs = [
     kano,
     luKang,
     scorpion 
   ]
   const bgstyle = {
-    backgroundImage: `url(${backgroundImgs[0]})`
-
-
+    backgroundImage: `url(${backgroundImgs[count]})`
   }
 
   const changeColor = () => {
-    console.log('button Clicked')
-    if(count === 3){
-      setCount(0)
-    } else setCount(count + 1)
+    count >= 2 ? setCount(0) : setCount(count+1);
+    // if(count >= 2){
+    //   setCount(0)
+    // } else setCount(count+1)
   }
+
   return (
-    <section className={Styles.background} style={bgstyle}>
+    <>
+    <section className={Styles.background} style={bgstyle} id={Styles.transition}>
       <h2>Slider goes here</h2> <br/>
-      <button onClick={changeColor}>Change Color</button>
     </section>
+      <button onClick={changeColor}>Change Color</button>
+    </>
   );
 };
 

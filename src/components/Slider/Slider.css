@@ -1,7 +1,10 @@
 .background {
-  background: red;
   height: 50vh;
   background-size: auto;
+  opacity: .1;
+  transition-duration: 1s;
+}
 
-
+#transition {
+  opacity: 1;
 }
