@@ -16,18 +16,14 @@ const Slider = () => {
     backgroundImage: `url(${backgroundImgs[count]})`
   }
 
-  const changeColor = () => {
-    count >= 2 ? setCount(0) : setCount(count+1);
-    // if(count >= 2){
-    //   setCount(0)
-    // } else setCount(count+1)
-  }
+  setTimeout(() => {
+    return count >= 2 ? setCount(0) : setCount(count+1);
+  }, 5000)
 
   return (
     <>
     <section className={Styles.background} style={bgstyle} id={Styles.transition}>
     </section>
-      <button onClick={changeColor}>Change Color</button>
     </>
   );
 };
