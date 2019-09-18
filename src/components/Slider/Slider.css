@@ -1,6 +1,6 @@
 .background {
   height: 50vh;
-  background-size: auto;
+  background-size: cover;
   opacity: .1;
   transition-duration: 1s;
 }

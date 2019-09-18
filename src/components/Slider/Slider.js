@@ -26,7 +26,6 @@ const Slider = () => {
   return (
     <>
     <section className={Styles.background} style={bgstyle} id={Styles.transition}>
-      <h2>Slider goes here</h2> <br/>
     </section>
       <button onClick={changeColor}>Change Color</button>
     </>
